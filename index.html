@@ -1248,13 +1248,13 @@ Caucasians misclassified as non-recidivists = 51%
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1>Methodology</h1>
-In my first step of exploratory analysis, I separate both races and analyze the trends in scores for people who do or do not recidivate. Bar plots of these subsets show a trend that African-American defendants are usually given higher risk scores.</p>
-<p>The article and original analysis analyze scores for both races as a whole. On the other hand, I decided to subset both races by whether or not the defendents recidivate. The article also includes a few examples of the risk assessment algorithm making mistakes that are biased towards African-Americans. Since a few side by side examples are not enough to prove any claims, 
-this made me wonder if the questionnaire was biased or if the algorithm itself is just not very good. 
+<p>In my first step of exploratory analysis, I separate both races and analyze the trends in scores for people who do or do not recidivate. Bar plots of these subsets show a trend that African-American defendants are usually given higher risk scores.
+The article and original analysis analyze scores for both races as a whole. On the other hand, I decided to subset both races by whether or not the defendents recidivate. The article also includes a few examples of the risk assessment algorithm making mistakes that are biased towards African-Americans. Since a few side by side examples are not enough to prove any claims, 
+this made me wonder if the questionnaire was biased or if the algorithm itself is just not very good.
 I also looked to see if there were examples of where African-American defendents were given a low risk score, but went on to recidivate, and Caucasian defendants who were given a Medium/High risk score, but did not recidivate. 
 <a href="http://www.nbcmiami.com/news/local/Man-Strangled-Ex-Girlfriend-in-Pompano-Beach-Making-Her-Lose-Consciousness-Authorities-214996191.html">http://www.nbcmiami.com/news/local/Man-Strangled-Ex-Girlfriend-in-Pompano-Beach-Making-Her-Lose-Consciousness-Authorities-214996191.html</a>
-The statistics of the misclassifications are below, and I was also able to find a hearing video of a COMPAS scored African-American defendant who ended up committing a horrendous crime, even though he was rated a 1 out of 10 on the COMPAS scale. However, cherry picked examples do not provide as much insight as an overall analysis.</p>
-<p>I find that Black defendants were twice as likely to be misclassified as risky than white defendants. (41% vs. 22%) 
+The statistics of the misclassifications are below, and I was also able to find a hearing video of a COMPAS scored African-American defendant who ended up committing a horrendous crime, even though he was rated a 1 out of 10 on the COMPAS scale. However, cherry picked examples do not provide as much insight as an overall analysis.
+I find that Black defendants were twice as likely to be misclassified as risky than white defendants. (41% vs. 22%) 
 White defendants are 66% more likely to be misclassified as low risk than black defendants. (51% vs. 30%)
 In regards to the model, I use gender, age, juvenile crime history, adult crime history, and current degree charge to see if we can predict recidivism status. 
 Once my predictions have been done, I compare my predictions to the given COMPAS scores and actual recidivism status to see how my model performed. Any COMPAS score above 4 implies that the defendant will recidivate.</p>
@@ -1791,7 +1791,9 @@ RK5CYII=
 </div>
 </div>
 <h1>Conclusion</h1> 
-Comparing the model's ROC curve, confusion matrix, and F1-scores for both methods, it is possible to use a few factual variables to create a method that performs slightly better than the current COMPAS algorithm.  With access to some of the answers to fact based questions or more insight into a criminal’s history opens the possibility to create a model that performs even better. After seeing how my model performed, this makes me question if the COMPAS method is too complex and expensive without being insightful.  With many critics claiming that the COMPAS method is biased, would an algorithm using factual data as opposed to self reported answers solve the biased factors? What does it add to the argument regarding the ethics of using machines to determine people's lives?
+<p>Comparing the model's ROC curve, confusion matrix, and F1-scores for both methods, it is possible to use a few factual variables to create a method that performs slightly better than the current COMPAS algorithm.</p>
+<p>With access to some of the answers to fact based questions or more insight into a criminal’s history opens the possibility to create a model that performs even better. After seeing how my model performed, this makes me question if the COMPAS method is too complex and expensive without being insightful.  With many critics claiming that the COMPAS method is biased, would an algorithm using factual data as opposed to self reported answers solve the biased factors?</p>
+<p>What does it add to the argument regarding the ethics of using machines to determine people's lives?</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
