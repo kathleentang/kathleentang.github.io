@@ -107,16 +107,16 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Introduction</p>
+<h1>Introduction</h1>
 <p>Across the country, ‘risk assessment’ scores are used as a tool to predict the likelihood of a criminal defendant committing a crime in the future.These scores are used to influence bond, parole, and sentencing. There are many critics of these assessments, with many claiming that the judicial systems are willing to disproportionately harm minorities in favor of easing an overburdened system.</p>
-<p>Data Collection</p>
+<h1>Data Collection</h1>
 <p>An investigative team at ProPublica did an analysis of risk scores and recidivism for over 7000 people arrested over two years in Broward County, Florida and found that Black defendants were falsely predicted to commit crimes at twice the rate of white defendants. This team released the datasets and methodology online. <a href="https://www.documentcloud.org/documents/2702103-Sample-Risk-Assessment-COMPAS-CORE.html">https://www.documentcloud.org/documents/2702103-Sample-Risk-Assessment-COMPAS-CORE.html</a>
 <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a></p>
 <p>The variables that came with the dataset includes the criminal defendant’s name, age, race, prior crime counts, time in jail for current crime, current charge degree, a description of the current charge, whether or not the defendant recidivates, and if they do, if the recidivation was a violent one.</p>
-<p>Variable and Model Selection
+<h1>Variable and Model Selection</h1>
 Before we get into my model and variable selections, we should discuss how the current scoring system works. Currently, each criminal defendant is given a 137 question survey that asks about topics such as gang membership, stability of family, arrest statistics of friends, residential stability, neighborhood crime, money, boredom, sadness, anger, and criminal/ethical thinking. 
 Since some of the arguments against this algorithm is that while none of these questions explicitly ask about race, because of socioeconomic standards in the United States, many of these questions imply race. For example, some of the questions include:
-“Did you complete your diploma or GED?”</p>
+<p>“Did you complete your diploma or GED?”</p>
 <p>“Which of the following best describes who raised you?”</p>
 <p>“How much crime is in your neighborhood?”</p>
 <p>“Do some of your friends or family feel they must carry a weapon to protect themselves in your neighborhood?”</p>
@@ -1246,7 +1246,7 @@ Caucasians misclassified as non-recidivists = 51%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Methodology: 
+<h1>Methodology</h1>
 In my first step of exploratory analysis, I separate both races and analyze the trends in scores for people who do or do not recidivate. Bar plots of these subsets show a trend that African-American defendants are usually given higher risk scores.</p>
 <p>The article and original analysis analyze scores for both races as a whole. On the other hand, I decided to subset both races by whether or not the defendents recidivate. The article also includes a few examples of the risk assessment algorithm making mistakes that are biased towards African-Americans. Since a few side by side examples are not enough to prove any claims, 
 this made me wonder if the questionnaire was biased or if the algorithm itself is just not very good. 
@@ -1788,7 +1788,8 @@ RK5CYII=
 </div>
 </div>
 </div>
-</div>Conclusion: 
+</div>
+<h1>Conclusion</h1> 
 Comparing the model's ROC curve, confusion matrix, and F1-scores for both methods, it is possible to use a few factual variables to create a method that performs slightly better than the current COMPAS algorithm.  With access to some of the answers to fact based questions or more insight into a criminal’s history opens the possibility to create a model that performs even better. After seeing how my model performed, this makes me question if the COMPAS method is too complex and expensive without being insightful.  With many critics claiming that the COMPAS method is biased, would an algorithm using factual data as opposed to self reported answers solve the biased factors? What does it add to the argument regarding the ethics of using machines to determine people's lives?
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
